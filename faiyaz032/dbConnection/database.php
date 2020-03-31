@@ -17,3 +17,11 @@ class Database{
         return $conn;
     }
 }
+$conn = new Database;
+$connect = $conn->connect();
+
+if (!$connect) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Database Connected successfully";
+?>
