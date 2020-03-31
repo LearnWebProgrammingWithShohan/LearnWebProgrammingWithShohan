@@ -1,6 +1,14 @@
 # LearnWebProgrammingWithShohan
 LearnWebProgrammingWithShohan Group main repository where everyone will perform git activities and future projects along with task results
 
+## Group Tasks
+
+| # | TASK                                      | Status|
+| : |   :-                                      | :-    |
+| 1 | Git Basic                                 |- [x]  |
+| 2 | Git Intermediate                          |- [x]  |
+| 3 | Php OOP mysql database connection project |- [ ]  |
+
 ## Project Folder Strcuture ( Under Development )
 
 ## How to Contribute
