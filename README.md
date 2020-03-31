@@ -3,12 +3,11 @@ LearnWebProgrammingWithShohan Group main repository where everyone will perform 
 
 ## Group Tasks
 
-| # | TASK                                      | Status|
-| : |   :-                                      | :-    |
-| 1 | Git Basic                                 |- [x]  |
-| 2 | Git Intermediate                          |- [x]  |
-| 3 | Php OOP mysql database connection project |- [ ]  |
-
+| #  | Task | Status |
+| ------------- | ------------- | ------------- |
+| 1  | Git Intro  | :x:  |
+| 2  | Git Intermediate  | :x:   |
+| 3  | Php OOP mysql database connection project  | :heavy_check_mark:  |
 ## Project Folder Strcuture ( Under Development )
 
 ## How to Contribute
