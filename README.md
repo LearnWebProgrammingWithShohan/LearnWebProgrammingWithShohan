@@ -4,7 +4,7 @@ LearnWebProgrammingWithShohan Group main repository where everyone will perform 
 ## Group Tasks
 
 | #  | Task | Status |
-| ------------- | ------------- | ------------- |
+| ------------- | :--- | ------------- |
 | 1  | Git Intro  | :x:  |
 | 2  | Git Intermediate  | :x:   |
 | 3  | Php OOP mysql database connection project  | :heavy_check_mark:  |
