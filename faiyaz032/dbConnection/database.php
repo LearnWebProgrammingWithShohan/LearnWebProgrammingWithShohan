@@ -6,6 +6,9 @@ class Database{
     private $password;
     private $dbName;
 
+    // this connect method should be able to have some parameters
+    // not directly in mysqli method
+    
     public function connect()
     {
         $hostName = $this->hostName = "localhost";
@@ -14,9 +17,15 @@ class Database{
         $dbName =   $this->password = "db_connection";
 
         $conn = new mysqli($hostName,$username,$password, $dbName);
+        
+        // avoid naming this short, try connection instead of conn
+        
         return $conn;
     }
 }
+
+// connect from another file
+
 $conn = new Database;
 $connect = $conn->connect();
 
