@@ -1,3 +1,22 @@
+<?php
+
+    require_once 'app/classes/Database.php';
+    require_once 'app/classes/Task.php';
+
+    $taskObj = new Task();
+
+    if (isset($_POST['insert'])) {
+        $taskname_add = $_POST['taskname_add'];
+        $message = $taskObj->insertTask($taskname_add);
+        if($message){
+            echo "<h2 class='text-center'>Successfully Added</h2>";
+        }
+    }
+
+    
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,14 +59,12 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <?php 
-                                        for($i=1;$i<=3;$i++){
-                                    ?>
+                                    
                                         
                                     <form class="from-group" method="post" action="">
                                         <div class="input-group">
                                           <span name="task_id" class="input-group-addon">1</span>
-                                          <input name="taskname_update" type="text" class="input-lg form-control" placeholder="Edit your task">
+                                          <input value="" name="taskname_update" type="text" class="input-lg form-control" placeholder="Edit your task">
 
                                           <span class="input-group-btn">
                                                 <button name="update" title="Update" class="btn btn-warning btn-lg" type="submit" ><i class="fa fa-pencil-square-o"></i></button>
@@ -55,9 +72,7 @@
                                            </span>
                                         </div> <br>
                                     </form>
-                                    <?php
-                                    }
-                                    ?>
+                                    
                                 </div>
                             </div>
                         </div>
