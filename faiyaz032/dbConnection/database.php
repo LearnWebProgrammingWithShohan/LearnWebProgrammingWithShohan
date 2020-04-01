@@ -1,36 +1,67 @@
 <?php
-class Database{
 
-    private $hostName;
-    private $username;
-    private $password;
-    private $dbName;
+namespace Connection;
+use PDO;
+use PDOException;
+use mysqli;
 
-    // this connect method should be able to have some parameters
-    // not directly in mysqli method
-    
+//mySql Connection
+class Mysql_Connection{
+
+    private $hostName = '';
+    private $username ='';
+    private $password ='';
+    private $dbName = '';
+
+    public function __construct($hostName,$username,$password,$dbName)
+    {
+        $this->hostName = $hostName;
+        $this->username = $username;
+        $this->password = $password;
+        $this->dbName =   $dbName;
+    }
+
     public function connect()
     {
-        $hostName = $this->hostName = "localhost";
-        $username = $this->username = "root";
-        $password = $this->password = "";
-        $dbName =   $this->password = "db_connection";
+        $connect = new mysqli($this->hostName, $this->username, $this->password, $this->dbName);
+        return $connect;
+    }
 
-        $conn = new mysqli($hostName,$username,$password, $dbName);
-        
-        // avoid naming this short, try connection instead of conn
-        
-        return $conn;
+    public function disconnect()
+    {
+            mysqli_close($this->connect()) OR die('There was a problem disconnecting from the database.');
     }
 }
 
-// connect from another file
 
-$conn = new Database;
-$connect = $conn->connect();
+//PDO Connection
+class PDO_Connection{
 
-if (!$connect) {
-    die("Connection failed: " . mysqli_connect_error());
+    private $hostName = '';
+    private $username ='';
+    private $password ='';
+    private $dbName = '';
+
+    public function __construct($hostName,$username,$password,$dbName)
+    {
+        $this->hostName = $hostName;
+        $this->username = $username;
+        $this->password = $password;
+        $this->dbName =   $dbName;
+    }
+
+    public function connect()
+    {
+        try{
+
+            $dsn = "mysql:host".$this->hostName.";dbName=".$this->dbName;
+            $pdo = new PDO($dsn,$this->username, $this->password);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $pdo;
+
+        }catch(PDOException $e){
+            echo "Connection Failed".$e->getMessage();
+        }
+    }
+
 }
-echo "Database Connected successfully";
-?>
