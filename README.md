@@ -7,7 +7,7 @@ LearnWebProgrammingWithShohan Group main repository where everyone will perform 
 | ------------- | :--- | ------------- |
 | 1  | Git Intro  | :x:  |
 | 2  | Git Intermediate  | :x:   |
-| 3  | Php OOP mysql database connection project  | :heavy_check_mark:  |
+| 3  | Php OOP mysql Project  | :heavy_check_mark:  |
 ## Project Folder Strcuture ( Under Development )
 
 ## How to Contribute
