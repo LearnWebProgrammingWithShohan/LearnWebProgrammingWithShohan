@@ -1,5 +1,12 @@
 <?php
-class Database{
+
+namespace Connection;
+use PDO;
+use PDOException;
+use mysqli;
+
+//mySql Connection
+class Mysql_Connection{
 
     private $hostName = '';
     private $username ='';
@@ -16,8 +23,8 @@ class Database{
 
     public function connect()
     {
-        $connection = new mysqli($this->hostName, $this->username, $this->password, $this->dbName);
-        return $connection;
+        $connect = new mysqli($this->hostName, $this->username, $this->password, $this->dbName);
+        return $connect;
     }
 
     public function disconnect()
@@ -25,16 +32,37 @@ class Database{
             mysqli_close($this->connect()) OR die('There was a problem disconnecting from the database.');
     }
 }
-$database = new Database('localhost', 'root', '', 'db_connection'); //Here you have to pass your own credentials
-$connect_db = $database->connect();
 
 
-if (!$connect_db)
-{
-    die("Connection failed: " . mysqli_connect_error());
+//PDO Connection
+class PDO_Connection{
 
-}elseif($connect_db){
-    echo "Database Connected successfully";
+    private $hostName = '';
+    private $username ='';
+    private $password ='';
+    private $dbName = '';
+
+    public function __construct($hostName,$username,$password,$dbName)
+    {
+        $this->hostName = $hostName;
+        $this->username = $username;
+        $this->password = $password;
+        $this->dbName =   $dbName;
+    }
+
+    public function connect()
+    {
+        try{
+
+            $dsn = "mysql:host".$this->hostName.";dbName=".$this->dbName;
+            $pdo = new PDO($dsn,$this->username, $this->password);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            return $pdo;
+
+        }catch(PDOException $e){
+            echo "Connection Failed".$e->getMessage();
+        }
+    }
+
 }
 
-?>
