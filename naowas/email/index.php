@@ -27,7 +27,7 @@ $insert_mail=new Mysql_Connection();
 
    if ($sent_mail_online && $sql ){    
             echo "<script>alert('Mail has been sent')</script>";
-            echo"<script>window.open('index.php','_self')</script>";
+            echo"<script>window.open('sent_mail.php','_self')</script>";
    }  
      else {
              die("Database connection error: " . mysqli_connect_error());
