@@ -23,7 +23,7 @@ class Database
 
         // PDO Instance
         try {
-            $this->dbh = new PDO($dsn, $this->pass, $options);
+            $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
         } catch (PDOException $e) {
             $this->error = $e->getMessage();
         }
