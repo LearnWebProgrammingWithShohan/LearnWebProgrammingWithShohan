@@ -1,7 +1,9 @@
 <?php
+    ob_start();
+    session_start();
 
-    require_once 'app/classes/Database.php';
-    require_once 'app/classes/Task.php';
+    require_once 'App/classes/Database.php';
+    require_once 'App/classes/Task.php';
 
     $taskObj = new Task();
 
@@ -9,11 +11,20 @@
         $taskname_add = $_POST['taskname_add'];
         $message = $taskObj->insertTask($taskname_add);
         if($message){
-            echo "<h2 class='text-center'>Successfully Added</h2>";
+            echo "<h2 style='color: green' class='text-center'>Successfully Added</h2>";
         }
     }
-
     
+
+    // update session message
+    if(isset($_SESSION['update_msg'])){
+        echo "<h2 style='color: green' class='text-center'>Task Updated Successfully</h2>";
+    }
+    // delete session message
+    if(isset($_SESSION['delete_msg'])){
+        echo "<h2 style='color: red' class='text-center'>Task Deleted Successfully</h2>";
+    }
+    session_destroy();
 
  ?>
 
@@ -59,20 +70,37 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-12">
-                                    
+
+                                    <?php 
+                                        $sl = 1;
+                                        // show all tasks
+                                        $allTasks = $taskObj->showAllTasks();
+                                        while ($row = mysqli_fetch_assoc($allTasks)) {
+                                            $id = $row['id'];
+                                            $task_name = $row['task_name'];
+
+                                    ?>
                                         
-                                    <form class="from-group" method="post" action="">
+                                    <form class="from-group" method="post" action="update.php">
                                         <div class="input-group">
-                                          <span name="task_id" class="input-group-addon">1</span>
-                                          <input value="" name="taskname_update" type="text" class="input-lg form-control" placeholder="Edit your task">
+                                          <span name="task_id" class="input-group-addon"><?php echo $sl++ ?></span>
+
+                                          <input value="<?php echo $id ;?>" name="id" type="hidden">
+                                        
+                                          <input value="<?php echo $task_name ;?>" name="taskname_update" type="text" class="input-lg form-control" placeholder="Edit your task">
 
                                           <span class="input-group-btn">
-                                                <button name="update" title="Update" class="btn btn-warning btn-lg" type="submit" ><i class="fa fa-pencil-square-o"></i></button>
-                                                <button name="delete" title="Delete" class="btn btn-danger btn-lg" type="submit"><i class="fa fa-trash"></i></button>
+                                                <button name="update" title="Update" class="btn btn-warning btn-lg"><i class="fa fa-pencil-square-o"></i></button>
+
+                                                <!-- <a href="update.php?update_id=<?php echo $row["id"];?>" name="update" title="Update" class="btn btn-warning btn-lg"><i class="fa fa-pencil-square-o"></i></a> -->
+
+                                                <a href="delete.php?id=<?php echo $row["id"];?>" name="delete" title="Delete" class="btn btn-danger btn-lg "><i class="fa fa-trash-o"></i></a>
                                            </span>
                                         </div> <br>
                                     </form>
-                                    
+                                    <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
