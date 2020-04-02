@@ -8,7 +8,19 @@ LearnWebProgrammingWithShohan Group main repository where everyone will perform 
 | 1  | Git Intro  | :x:  |
 | 2  | Git Intermediate  | :x:   |
 | 3  | Php OOP mysql Project  | :heavy_check_mark:  |
+
 ## Project Folder Strcuture ( Under Development )
+
+- First after cloning - create a new folder with your username , example - shohan494
+- Inside the folder try to create a FEATURE.MD/TASK.MD and try to note down something related to your task/feature
+- In the same folder create another folder by naming it as the same as your feature name which you are going to develop
+
+```
+username
+|── feature-name
+└── FEATURE.MD/TASK.MD
+```
+
 
 ## How to Contribute
 
