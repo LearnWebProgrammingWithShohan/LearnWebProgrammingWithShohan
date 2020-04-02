@@ -2,6 +2,7 @@
 include 'functions.php';
 $sent_mail=new Mysql_Connection();
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>

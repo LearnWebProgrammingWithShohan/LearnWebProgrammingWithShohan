@@ -23,5 +23,12 @@ class Mysql_Connection
 
         return $result;
     }
+
+    public function sentmail_db()
+	 {
+	 $result=mysqli_query($this->connect_db,"select * from send_mail");
+	 
+	 return $result;
+	 }
 }
 ?>
