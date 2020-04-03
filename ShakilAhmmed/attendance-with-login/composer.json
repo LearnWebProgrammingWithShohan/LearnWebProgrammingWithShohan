@@ -1,0 +1,23 @@
+{
+    "name": "shakil/attendance-with-login",
+    "description": "Take Attendance When User Logged In",
+    "authors": [
+        {
+            "name": "ShakilAhmmed",
+            "email": "shakilfci461@gmail.com"
+        }
+    ],
+    "require": {
+    	"php": "^7.2",
+        "phroute/phroute": "^2.1",
+        "illuminate/database": "^7.4"
+    },
+    "autoload": {
+        "files": [
+            "app/Helpers/helper.php"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
