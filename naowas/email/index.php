@@ -1,10 +1,12 @@
 <?php
 include 'functions.php';
+require 'PHPMailerAutoload.php';
+require 'emailuserpass.php';
 $insert_mail=new Mysql_Connection();
 ?>
+
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -17,21 +19,43 @@ $insert_mail=new Mysql_Connection();
 <?php
 
     if(isset($_POST['sendmail'])){
-    $mail_id = $_POST['email'];
-    $mail_sub = $_POST['subject'];
-    $mail_body = $_POST['message'];
-   
-   $sent_mail_online = mail($_POST['email'], $_POST['subject'], $_POST['message']);
-   $sql=$insert_mail->sent_mail_db($mail_id,$mail_sub,$mail_body);
 
+        $mail_id = $_POST['email'];
+        $mail_sub = $_POST['subject'];
+        $mail_body = $_POST['message'];
+ 
 
-   if ($sent_mail_online && $sql ){    
+        $mail = new PHPMailer;
+        
+       // $mail->SMTPDebug = 3;                                  // Enable verbose debug output
+        
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = EMAIL;                              // SMTP username
+        $mail->Password = PASS;                               // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;                                    // TCP port to connect to
+        
+        $mail->setFrom(EMAIL, 'Naowas');
+        $mail->addAddress($_POST['email']);                   // Add a recipient
+        $mail->addReplyTo(EMAIL);
+
+        
+        $mail->isHTML(false);                                  // Set email format to HTML
+        
+        $mail->Subject = $_POST['subject'];
+        $mail->Body = $_POST['message'];
+        
+        if(!$mail->send()) {
+            echo 'Message could not be sent.';
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
+        } else {
+            $sql=$insert_mail->sent_mail_db($mail_id,$mail_sub,$mail_body);
             echo "<script>alert('Mail has been sent')</script>";
-            echo"<script>window.open('sent_mail.php','_self')</script>";
-   }  
-     else {
-             die("Database connection error: " . mysqli_connect_error());
-          }
+            echo"<script>window.open('index.php','_self')</script>";
+
+        }
 
     }
 
@@ -39,12 +63,14 @@ $insert_mail=new Mysql_Connection();
 
 <body>
     <div class="contact-clean">
+
         <form action="index.php" method="post" enctype="multipart/form-data" >
-            <h2 class="text-center">Send E-mail</h2>
+            <h2 class="text-center">Send E-mail </h2>
 			 <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Email"><small class="form-text text-danger">Please enter a correct email address.</small></div>
             <div class="form-group"><input class="form-control" type="text" name="subject" placeholder="Subject"></div>
             <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div>
-            <div class="form-group"><button class="btn btn-primary" type="submit" name="sendmail">send </button></div>
+            <div class="form-group"><button class="btn btn-primary" type="submit" name="sendmail">send </button>
+            <span style= "float:right" ><a class="btn btn-primary btn-sm" href="sent_mail.php" role="button">View sent Mail</a></span></div>
         </form>
     </div>
     <script src="assets/js/jquery.min.js"></script>
