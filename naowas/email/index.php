@@ -73,8 +73,8 @@ $insert_mail=new Mysql_Connection();
 			 <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Email"><small class="form-text text-danger">Please enter a correct email address.</small></div>
             <div class="form-group"><input class="form-control" type="text" name="subject" placeholder="Subject"></div>
             <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div>
-            <div class="form-group"><input type="hidden" name="MAX_FILE_SIZE" value="100000000"> <input class="form-control" type="file" name="file[]" multiple='multiple' id='file' placeholder="Attach File"></div>            <div class="form-group"><button class="btn btn-primary" type="submit" name="sendmail">send </button>
-            <span style= "float:right" ><a class="btn btn-primary btn-sm" href="sent.php" role="button">View sent Mail</a></span></div>
+            <div class="form-group"><input type="hidden" name="MAX_FILE_SIZE" value="900000000"> <input class="form-control" type="file" name="file[]" multiple='multiple' id='file' placeholder="Attach File"></div>            <div class="form-group"><button class="btn btn-primary" type="submit" name="sendmail">send </button>
+            <span style= "float:right" ><a class="btn btn-primary btn-sm" href="sent_mail.php" role="button">View sent Mail</a></span></div>
         </form>
     </div>
     <script src="assets/js/jquery.min.js"></script>
