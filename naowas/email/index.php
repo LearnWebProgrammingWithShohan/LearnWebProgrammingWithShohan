@@ -4,9 +4,9 @@ require 'PHPMailerAutoload.php';
 require 'emailuserpass.php';
 $insert_mail=new Mysql_Connection();
 ?>
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -41,6 +41,10 @@ $insert_mail=new Mysql_Connection();
         $mail->addAddress($_POST['email']);                   // Add a recipient
         $mail->addReplyTo(EMAIL);
 
+    for($i=0; $i < count($_FILES['file']['tmp_name']); $i++)
+    {    
+        $mail->addAttachment($_FILES['file']['tmp_name'][$i], $_FILES['file']['name'][$i]);  
+    }
         
         $mail->isHTML(false);                                  // Set email format to HTML
         
@@ -53,7 +57,7 @@ $insert_mail=new Mysql_Connection();
         } else {
             $sql=$insert_mail->sent_mail_db($mail_id,$mail_sub,$mail_body);
             echo "<script>alert('Mail has been sent')</script>";
-            echo"<script>window.open('index.php','_self')</script>";
+            echo"<script>window.open('sent.php','_self')</script>";
 
         }
 
@@ -69,8 +73,8 @@ $insert_mail=new Mysql_Connection();
 			 <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Email"><small class="form-text text-danger">Please enter a correct email address.</small></div>
             <div class="form-group"><input class="form-control" type="text" name="subject" placeholder="Subject"></div>
             <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div>
-            <div class="form-group"><button class="btn btn-primary" type="submit" name="sendmail">send </button>
-            <span style= "float:right" ><a class="btn btn-primary btn-sm" href="sent_mail.php" role="button">View sent Mail</a></span></div>
+            <div class="form-group"><input type="hidden" name="MAX_FILE_SIZE" value="100000000"> <input class="form-control" type="file" name="file[]" multiple='multiple' id='file' placeholder="Attach File"></div>            <div class="form-group"><button class="btn btn-primary" type="submit" name="sendmail">send </button>
+            <span style= "float:right" ><a class="btn btn-primary btn-sm" href="sent.php" role="button">View sent Mail</a></span></div>
         </form>
     </div>
     <script src="assets/js/jquery.min.js"></script>
