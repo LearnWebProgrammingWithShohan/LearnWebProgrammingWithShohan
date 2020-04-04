@@ -22,7 +22,8 @@ $sent_mail=new Mysql_Connection();
       <th scope="col">No.</th>
       <th scope="col">Email ID</th>
       <th scope="col">Subject</th>
-      <th scope="col">Message</th>
+    <th scope="col" style="width: 30.00%">Message</th>
+      <th scope="col">Time Stamp</th>
     </tr>
   </thead>
   
