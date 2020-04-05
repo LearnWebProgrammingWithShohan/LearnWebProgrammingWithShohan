@@ -1,81 +1,85 @@
 <?php
-  session_start();
-  $username = "";
-  $email = "";
-  $errors =array();
-  //CONNECT TO DB
+session_start();
 
-  $db = mysqli_connect('localhost','root','','registration');
+// initializing variables
+$username = "";
+$email    = "";
+$errors = array();
 
-  //IF REGISTER IS CLICKED.. actually done.. but the name is set to REGISTER
+// connect to the database
+$db = mysqli_connect('localhost', 'root', '', 'registration');
 
-  if (isset($_POST['register'])) {
-      $username = mysqli_real_escape_string($db,$_POST['username']);
-      $email = mysqli_real_escape_string($db,$_POST['email']);
-      $password_1 = mysqli_real_escape_string($db,$_POST['password_1']);
-      $password_2 = mysqli_real_escape_string($db,$_POST['password_2']);
+// REGISTER USER
+if (isset($_POST['reg_user'])) {
+  // receive all input values from the form
+  $username = mysqli_real_escape_string($db, $_POST['username']);
+  $email = mysqli_real_escape_string($db, $_POST['email']);
+  $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
+  $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
-      if (empty($username)) {
-        array_push($errors, "Don't feel shy! Tell us your name!");
-      }
-      if (empty($email)) {
-        array_push($errors, "We won't send you mail daily! Come on!");
-      }
-      if (empty($password_1)) {
-        array_push($errors, "Trust Us it's safe :D ");
-      }
-      if ($password_1 != $password_2) {
-        array_push($errors, "Oops! you type a wrong pass in the confirmation :( ");
-      }
-      //IF ALL OKAY THEN INSERT (REMEMBER TO ENCRYPT PASSWORD)
-      if ($errors == 0) {
-        $password = md5($password_1);
-        $sql = "INSERT INTO user (username,email,password)
-                   VALUES('$username','$email','$password')";
-        mysqli_query($db,$sql);
-        $_SESSION['username'] = $username;
-        $_SESSION['success'] = "You are now a part of us";
-        header('location:index.php');
-      }
+  // form validation: ensure that the form is correctly filled ...
+  // by adding (array_push()) corresponding error unto $errors array
+  if (empty($username)) { array_push($errors, "Username is required"); }
+  if (empty($email)) { array_push($errors, "Email is required"); }
+  if (empty($password_1)) { array_push($errors, "Password is required"); }
+  if ($password_1 != $password_2) {
+	array_push($errors, "The two passwords do not match");
   }
 
-  //LOG IN
+  // first check the database to make sure
+  // a user does not already exist with the same username and/or email
+  $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
+  $result = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($result);
 
-  if (isset($_POST['login'])) {
-    $username = mysqli_real_escape_string($db,$_POST['username']);
-    $password = mysqli_real_escape_string($db,$_POST['password']);
-
-    if (empty($username)) {
-      array_push($errors, "Don't feel shy! Tell us your name!");
-    }
-    if (empty($password)) {
-      array_push($errors, "Hey, don't tell me you forgot the pass! ");
-    }
-//comparing
-    if (count($errors) == 0) {
-      $password = md5($password); //encrypt first
-      $query = "SELECT * FROM user WHERE username='$username' AND password='$password'";
-      $result = mysqli_query($db, $query);
-      if (mysqli_num_rows($result) == 1) {
-        // LOG USER IN
-        $_SESSION['username'] = $username;
-        $_SESSION['success'] = "Hello there!";
-        header('location:index.php');
-      }else{
-        array_push($errors, "Never saw you before, Forgot pass?");
-      }
+  if ($user) { // if user exists
+    if ($user['username'] === $username) {
+      array_push($errors, "Username already exists");
     }
 
-
+    if ($user['email'] === $email) {
+      array_push($errors, "email already exists");
+    }
   }
 
+  // Finally, register user if there are no errors in the form
+  if (count($errors) == 0) {
+  	$password = md5($password_1);//encrypt the password before saving in the database
 
-  //IF WANTS TO LOG OUT
-
-  if (isset($_GET['logout'])) {
-    session_destroy();
-    unset($_SESSION['username']);
-    header('location:login.php');
+  	$query = "INSERT INTO users (username, email, password)
+  			  VALUES('$username', '$email', '$password')";
+  	mysqli_query($db, $query);
+  	$_SESSION['username'] = $username;
+  	$_SESSION['success'] = "You are now logged in";
+  	header('location: index.php');
   }
+}
+
+
+// LOGIN USER
+if (isset($_POST['login_user'])) {
+  $username = mysqli_real_escape_string($db, $_POST['username']);
+  $password = mysqli_real_escape_string($db, $_POST['password']);
+
+  if (empty($username)) {
+  	array_push($errors, "Username is required");
+  }
+  if (empty($password)) {
+  	array_push($errors, "Password is required");
+  }
+
+  if (count($errors) == 0) {
+  	$password = md5($password);
+  	$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+  	$results = mysqli_query($db, $query);
+  	if (mysqli_num_rows($results) == 1) {
+  	  $_SESSION['username'] = $username;
+  	  $_SESSION['success'] = "You are now logged in";
+  	  header('location: index.php');
+  	}else {
+  		array_push($errors, "Wrong username/password combination");
+  	}
+  }
+}
 
 ?>

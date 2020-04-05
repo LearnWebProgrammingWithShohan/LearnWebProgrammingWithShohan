@@ -49,20 +49,6 @@ form, .content {
   background: #5F9EA0;
   border: none;
   border-radius: 5px;
-
-}
-button.btn {
-    cursor: pointer;
-}
-p {
-    text-align: center;
-    padding: 15px;
-}
-a {
-    text-decoration: none;
-}
-a:hover{
-  color : #5F9EA0;
 }
 .error {
   width: 92%;
