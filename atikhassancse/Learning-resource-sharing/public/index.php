@@ -5,28 +5,8 @@ use App\model\Tag;
 include_once 'init.php';
 include_once 'partials/header.php';
 $tags = Tag::all();
-
+include_once 'partials/home/menu.php'
 ?>
-<div class="menu-section">
-        <div class="row">
-            <div class="col-md-9 col-lg-7 mx-auto">
-                <div class="menu text-center">
-                    <h1>Learning Resource Sharing</h1>
-                    <div class="tags">
-                        <ul>
-                            <?php
-                                if(count($tags)){
-                                    foreach ($tags as $tag){
-                                        echo '<li id="'. $tag['id'] .'" class="align-center"><a href="#"> <span class="hash-tag">#</span> <span class="text">'.$tag['tag'].'</span></a></li>';
-                                    }
-                                }
-                            ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
 
 <div class="post-section py-5">
     <div class="container">
@@ -39,20 +19,23 @@ $tags = Tag::all();
                     <div class="card-body">
                         <form action="" method="">
                             <div class="form-group">
-                                <textarea rows="4" class="textarea form-control" name="resource" placeholder="What's your opinion about the Resource"></textarea>
+                                <textarea rows="4" id="resource" class="textarea form-control" name="resource" placeholder="What's your opinion about the Resource"></textarea>
                             </div>
                             <div class="form-inline">
                                 <select class="selectpicker form-control" multiple data-live-search="true" title="Select tag">
-                                    <option data-tokens="PHP">PHP</option>
-                                    <option data-tokens="PHP">PHP</option>
-                                    <option data-tokens="PHP">PHP</option>
-                                    <option data-tokens="PHP">PHP</option>
+                                    <?php
+                                        if (count($tags)){
+                                            foreach ($tags as $tag){
+                                                echo '<option value="'.$tag['tag'].'" data-tokens="'. $tag['tag'].'">'. $tag['tag'].'</option>';
+                                            }
+                                        }
+                                    ?>
                                 </select>
                                 <span class="btn btn-info" data-toggle="modal" data-target="#addTag">+</span>
                             </div>
 
                             <div class="text-right">
-                                <input type="submit" value="Share Your Resource" class="btn btn-info">
+                                <input type="submit" id="submit-form" value="Share Your Resource" class="btn btn-info">
                             </div>
                         </form>
                     </div>
@@ -65,49 +48,7 @@ $tags = Tag::all();
 </div>
 
 
-<div class="newsfeed py-5">
-    <div class="container bootstrap snippet">
-        <div class="col-md-10 col-lg-8 mx-auto">
-            <div class="panel panel-white post panel-shadow">
-                <div class="post-heading">
-                    <div class="pull-left image">
-                        <img src="https://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
-                    </div>
-                    <div class="pull-left meta">
-                        <div class="title h5">
-                            <a href="#"><b>Ryan Haywood</b></a>
-                        </div>
-                        <h6 class="text-muted time">1 minute ago</h6>
-                    </div>
-                </div>
-                <div class="post-description">
-                    <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="stats">
-                                <a href="#" class="btn btn-outline-info stat-item">
-                                    <i class="fa fa-thumbs-up icon"></i>2
-                                </a>
-                                <a href="#" class="btn btn-outline-danger stat-item">
-                                    <i class="fa fa-thumbs-down icon"></i>12
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="post-tags text-right" style="margin-top: 20px;">
-                                <a href="#" class="btn btn-outline-danger">Laravel</a>
-                                <a href="#" class="btn btn-outline-danger">PHP</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+<?php include_once 'partials/home/newsfeed.php'?>
 
 
 
