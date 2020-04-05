@@ -1,0 +1,44 @@
+body{
+    background: #f2f2f2 !important;
+}
+.menu{
+    padding-top: 40px;
+}
+.menu h1{
+    font-size: 70px !important;
+    font-weight: 600;
+}
+.tags{
+    padding-top: 15px;
+
+}
+.tags ul li{
+    list-style: none;
+    display: inline-block;
+    background: #e6e6e6;
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
+    padding: 3px 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.tags ul li a{
+    color:#000;
+    font-size: 20px;
+    line-height: 20px;
+    outline: none;
+    text-decoration: none;
+}
+.tags ul li .hash-tag{
+    background: #000;
+    color: #fff;
+    width: 24px;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    display: inline-block;
+}
+

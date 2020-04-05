@@ -2,9 +2,133 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca63a8ac-9a80-42ce-bbec-aa654a62d97a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/css/bootstrap-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/css/bootstrap-select.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/css/bootstrap-select.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/bootstrap-select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/bootstrap-select.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/bootstrap-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/bootstrap-select.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-am_ET.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-am_ET.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-am_ET.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ar_AR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ar_AR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ar_AR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-bg_BG.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-bg_BG.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-bg_BG.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-cs_CZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-cs_CZ.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-cs_CZ.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-da_DK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-da_DK.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-da_DK.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-de_DE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-de_DE.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-de_DE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-en_US.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-en_US.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-en_US.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-es_CL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-es_CL.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-es_CL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-es_ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-es_ES.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-es_ES.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-et_EE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-et_EE.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-et_EE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-eu.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-eu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-fa_IR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-fa_IR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-fa_IR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-fi_FI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-fi_FI.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-fi_FI.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-fr_FR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-fr_FR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-fr_FR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-hr_HR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-hr_HR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-hr_HR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-hu_HU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-hu_HU.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-hu_HU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-id_ID.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-id_ID.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-id_ID.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-it_IT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-it_IT.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-it_IT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ja_JP.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ja_JP.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ja_JP.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-kh_KM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-kh_KM.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-kh_KM.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ko_KR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ko_KR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ko_KR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-lt_LT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-lt_LT.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-lt_LT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-lv_LV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-lv_LV.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-lv_LV.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-nb_NO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-nb_NO.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-nb_NO.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-nl_NL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-nl_NL.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-nl_NL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-pl_PL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-pl_PL.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-pl_PL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-pt_BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-pt_BR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-pt_BR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-pt_PT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-pt_PT.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-pt_PT.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ro_RO.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ro_RO.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ro_RO.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ru_RU.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ru_RU.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ru_RU.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-sk_SK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-sk_SK.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-sk_SK.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-sl_SI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-sl_SI.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-sl_SI.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-sv_SE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-sv_SE.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-sv_SE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-tr_TR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-tr_TR.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-tr_TR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ua_UA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ua_UA.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-ua_UA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-vi_VN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-vi_VN.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-vi_VN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-zh_CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-zh_CN.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-zh_CN.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-zh_TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-zh_TW.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/js/i18n/defaults-zh_TW.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/partials/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/partials/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atikhassancse/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/atikhassancse/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,14 +152,55 @@
         <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-select.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/css/bootstrap-select.css">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/js/custom.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/partials/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="8" column="215" selection-start-line="8" selection-start-column="215" selection-end-line="8" selection-end-column="215" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/partials/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="7" column="202" selection-start-line="7" selection-start-column="202" selection-end-line="7" selection-end-column="202" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -49,6 +214,10 @@
         <option value="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/init.php" />
         <option value="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/config/database.php" />
         <option value="$PROJECT_DIR$/atikhassancse/README.md" />
+        <option value="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/partials/header.php" />
+        <option value="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/partials/footer.php" />
+        <option value="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/js/custom.js" />
         <option value="$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/index.php" />
       </list>
     </option>
@@ -64,7 +233,7 @@
       <path value="$PROJECT_DIR$/ShakilAhmmed/attendance-with-login/public/assets/vendor/fontawesome-free/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="413" />
     <option name="y" value="217" />
     <option name="width" value="734" />
@@ -101,7 +270,67 @@
               <item name="LearnWebProgrammingWithShohan" type="462c0819:PsiDirectoryNode" />
               <item name="atikhassancse" type="462c0819:PsiDirectoryNode" />
               <item name="Learning-resource-sharing" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LearnWebProgrammingWithShohan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LearnWebProgrammingWithShohan" type="462c0819:PsiDirectoryNode" />
+              <item name="atikhassancse" type="462c0819:PsiDirectoryNode" />
+              <item name="Learning-resource-sharing" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LearnWebProgrammingWithShohan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LearnWebProgrammingWithShohan" type="462c0819:PsiDirectoryNode" />
+              <item name="atikhassancse" type="462c0819:PsiDirectoryNode" />
+              <item name="Learning-resource-sharing" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LearnWebProgrammingWithShohan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LearnWebProgrammingWithShohan" type="462c0819:PsiDirectoryNode" />
+              <item name="atikhassancse" type="462c0819:PsiDirectoryNode" />
+              <item name="Learning-resource-sharing" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap_select" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LearnWebProgrammingWithShohan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LearnWebProgrammingWithShohan" type="462c0819:PsiDirectoryNode" />
+              <item name="atikhassancse" type="462c0819:PsiDirectoryNode" />
+              <item name="Learning-resource-sharing" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap_select" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LearnWebProgrammingWithShohan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LearnWebProgrammingWithShohan" type="462c0819:PsiDirectoryNode" />
+              <item name="atikhassancse" type="462c0819:PsiDirectoryNode" />
+              <item name="Learning-resource-sharing" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap_select" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LearnWebProgrammingWithShohan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LearnWebProgrammingWithShohan" type="462c0819:PsiDirectoryNode" />
+              <item name="atikhassancse" type="462c0819:PsiDirectoryNode" />
+              <item name="Learning-resource-sharing" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LearnWebProgrammingWithShohan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LearnWebProgrammingWithShohan" type="462c0819:PsiDirectoryNode" />
+              <item name="atikhassancse" type="462c0819:PsiDirectoryNode" />
+              <item name="Learning-resource-sharing" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -114,6 +343,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\learn-with-shohan\LearnWebProgrammingWithShohan\atikhassancse\Learning-resource-sharing\assets\vendor\bootstrap_select" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -137,18 +371,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586055337244</updated>
-      <workItem from="1586055338394" duration="1194000" />
+      <workItem from="1586055338394" duration="11013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1194000" />
+    <option name="totallyTimeSpent" value="11013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19770774" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3187679" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -176,13 +410,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/atikhassancse/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -193,15 +420,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/config/database.php">
+    <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/init.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/index.php">
+    <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/partials/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="8" column="215" selection-start-line="8" selection-start-column="215" selection-end-line="8" selection-end-column="215" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/partials/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="7" column="202" selection-start-line="7" selection-start-column="202" selection-end-line="7" selection-end-column="202" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/js/custom.js">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/assets/vendor/bootstrap_select/css/bootstrap-select.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atikhassancse/Learning-resource-sharing/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
