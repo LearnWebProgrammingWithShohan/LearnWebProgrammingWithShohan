@@ -1,8 +1,15 @@
 <?php 
 
-use Validators\UserValidator;
+function __autoload($className){
+    if (file_exists($className . '.php')) 
+    {
+        require_once $className . '.php';
+        return true;
+    }
+    return false;
+}
 
-    require('user_validator.php');
+use Validators\UserValidator;
 
   if(isset($_POST['submit'])){
     // validate entries
