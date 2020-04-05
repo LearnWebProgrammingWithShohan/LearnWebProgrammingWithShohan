@@ -1,0 +1,13 @@
+{
+    "name": "rafid/task-assign",
+    "authors": [{
+        "name": "Rafid",
+        "email": "mahmudrafid02@gmail.com"
+    }],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
