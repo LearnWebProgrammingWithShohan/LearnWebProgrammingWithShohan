@@ -1,5 +1,7 @@
 <?php 
 
+use Validators\UserValidator;
+
     require('user_validator.php');
 
   if(isset($_POST['submit'])){

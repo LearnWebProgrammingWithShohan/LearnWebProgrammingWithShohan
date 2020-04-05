@@ -1,4 +1,7 @@
 <?php
+
+Namespace Validators;
+
 class UserValidator{
 
     private $data;
