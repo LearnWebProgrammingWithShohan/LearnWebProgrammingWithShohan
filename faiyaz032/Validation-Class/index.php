@@ -1,6 +1,9 @@
 <?php 
 
-  
+  if(isset($_POST['submit'])){
+    // validate entries
+    echo 'form submitted';
+  }
 
 ?>
 
