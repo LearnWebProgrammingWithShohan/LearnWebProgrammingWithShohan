@@ -1,5 +1,9 @@
 <?php
-    include_once 'partials/header.php'
+
+include_once 'init.php';
+include_once 'partials/header.php';
+use App\model\DB;
+
 ?>
 <div class="menu-section">
         <div class="row">
