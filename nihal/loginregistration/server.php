@@ -5,7 +5,7 @@
   $errors =array();
   //CONNECT TO DB
 
-  $db = mysqli_connect('localhost','root','','registrate');
+  $db = mysqli_connect('localhost','root','','registration');
 
   //IF REGISTER IS CLICKED.. actually done.. but the name is set to REGISTER
 
