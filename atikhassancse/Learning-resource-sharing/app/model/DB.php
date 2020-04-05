@@ -4,7 +4,7 @@ use mysqli;
 
 class DB
 {
-    protected static $instance = null;
+    public static $instance = null;
     private $host = null;
     private $username  = null;
     private $password  = null;
@@ -33,7 +33,7 @@ class DB
     public static function getInstance()
     {
         if (!isset(self::$instance)){
-            self::$instance = new DB();
+            new DB();
         }
         return self::$instance;
     }

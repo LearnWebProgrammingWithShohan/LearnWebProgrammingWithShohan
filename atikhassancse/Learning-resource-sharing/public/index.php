@@ -1,8 +1,10 @@
 <?php
 
+use App\model\Tag;
+
 include_once 'init.php';
 include_once 'partials/header.php';
-use App\model\DB;
+$tags = Tag::all();
 
 ?>
 <div class="menu-section">
@@ -12,11 +14,13 @@ use App\model\DB;
                     <h1>Learning Resource Sharing</h1>
                     <div class="tags">
                         <ul>
-                            <li class="align-center"><a href="#"> <span class="hash-tag">#</span> <span class="text">PHP</span></a></li>
-                            <li class="align-center"><a href="#"> <span class="hash-tag">#</span> <span class="text">JavaScript</span></a></li>
-                            <li class="align-center"><a href="#"> <span class="hash-tag">#</span> <span class="text">CSS</span></a></li>
-                            <li class="align-center"><a href="#"> <span class="hash-tag">#</span> <span class="text">Bootstrap</span></a></li>
-                            <li class="align-center"><a href="#"> <span class="hash-tag">#</span> <span class="text">Laravel</span></a></li>
+                            <?php
+                                if(count($tags)){
+                                    foreach ($tags as $tag){
+                                        echo '<li id="'. $tag['id'] .'" class="align-center"><a href="#"> <span class="hash-tag">#</span> <span class="text">'.$tag['tag'].'</span></a></li>';
+                                    }
+                                }
+                            ?>
                         </ul>
                     </div>
                 </div>
@@ -118,10 +122,13 @@ use App\model\DB;
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="error text-center text-danger pb-2">
+                        <span id="msg"></span>
+                    </div>
                     <form action="" method="">
                         <div class="form-inline">
-                            <input style="width: 85%; margin-right: 10px" class="form-control" name="tag" placeholder="Tag1, Tag2, Tag3">
-                            <input type="submit" class="btn btn-info" value="Add">
+                            <input style="width: 85%; margin-right: 10px" id="input-tags" class="form-control" name="tags" placeholder="Tag1, Tag2, Tag3">
+                            <input type="submit"  name="submit" class="btn btn-info add-tag-database" value="Add">
                         </div>
                     </form>
                 </div>
