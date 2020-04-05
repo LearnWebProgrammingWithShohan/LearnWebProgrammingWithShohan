@@ -28,7 +28,7 @@
      <?php endif?>
 
      <?php if(isset($_SESSION['username'])): ?>
-       <p>What's up <strong><?php echo $_SESSION['username']?>!</strong> </p>
+       <p>What's up <strong><?php echo $_SESSION['username']?>!</strong> </p> <?php endif?>
        <p> <a href="index.php?logout='1'"> Want to logout? Will miss you :( </a> </p>
    </div>
 
