@@ -1,0 +1,16 @@
+@import "font/css/all.css";
+
+a.red{
+    color: red;
+}
+.table-responsive {
+	display: table;
+}
+.table .thead-dark th {
+    background-color: #919191;
+    border-color: white;
+}
+.alert{
+    margin-top:10px;
+    margin-bottom:10px;
+}
