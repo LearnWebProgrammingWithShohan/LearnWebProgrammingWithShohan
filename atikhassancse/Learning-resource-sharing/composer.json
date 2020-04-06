@@ -1,0 +1,21 @@
+{
+    "name": "atik/learning-resource-sharing",
+    "description": "LRS is a feature of the project where anyone can share learning resource and they can vote the resource depend on Quality.",
+    "type": "feature",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Atik Hassan",
+            "email": "atikhassan.cse@gmail.com"
+        }
+    ],
+    "autoload":{
+        "files":[
+            "config\/database.php"
+        ],
+        "psr-4":{
+            "App\\":"app"
+        }
+    },
+    "require": {}
+}
