@@ -1,2 +1,2 @@
 # Notification / Reminder System
-Notification / Reminder System System
+sending like and comments notifications
