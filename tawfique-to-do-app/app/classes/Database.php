@@ -16,7 +16,7 @@
 					$conn = mysqli_connect($host, $user, $pass, $db);
 				}
 				else if($_SERVER['REMOTE_ADDR']){
-					$conn = mysqli_connect($host, $user, $pass, $db);
+					$conn = mysqli_connect($user, $pass);
 				}
 				else{
 					echo "I dont know the rest" ;
