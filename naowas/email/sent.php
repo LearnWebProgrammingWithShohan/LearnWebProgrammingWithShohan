@@ -40,6 +40,7 @@ $sent_mail=new Mysql_Connection();
       <td><?php echo $row['email_id'];?></td>
       <td><?php echo $row['sub'];?></td>
 	  <td><?php echo $row['message_body'];?></td>
+	  <td><?php echo $row['sent_time'];?></td>
     </tr>
   </tbody>
   <?php $count=$count+1;} ?>
