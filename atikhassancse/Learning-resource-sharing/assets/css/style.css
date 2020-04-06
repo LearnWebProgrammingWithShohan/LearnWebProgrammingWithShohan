@@ -1,0 +1,106 @@
+body{
+    background: #f2f2f2 !important;
+}
+.menu{
+    padding-top: 40px;
+}
+.menu h1{
+    font-size: 70px !important;
+    font-weight: 600;
+}
+.tags{
+    padding-top: 15px;
+
+}
+.tags ul li{
+    list-style: none;
+    display: inline-block;
+    background: #e6e6e6;
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
+    padding: 3px 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.tags ul li a{
+    color:#000;
+    font-size: 20px;
+    line-height: 20px;
+    outline: none;
+    text-decoration: none;
+}
+.tags ul li .hash-tag{
+    background: #000;
+    color: #fff;
+    width: 24px;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+
+.panel-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 3px;
+}
+.panel-white {
+    background: #fff;
+    border: 1px solid #dddddd;
+}
+.panel-white  .panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+}
+.panel-white  .panel-footer {
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.post .post-heading {
+    height: 95px;
+    padding: 20px 15px;
+}
+.post .post-heading .avatar {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-right: 15px;
+}
+.post .post-heading .meta .title {
+    margin-bottom: 0;
+}
+.post .post-heading .meta .title a {
+    color: black;
+}
+.post .post-heading .meta .title a:hover {
+    color: #aaaaaa;
+}
+.post .post-heading .meta .time {
+    margin-top: 8px;
+    color: #999;
+}
+.post .post-image .image {
+    width: 100%;
+    height: auto;
+}
+.post .post-description {
+    padding: 15px;
+}
+.post .post-description p {
+    font-size: 14px;
+}
+.post .post-description .stats {
+    margin-top: 20px;
+}
+.post .post-description .stats .stat-item {
+    display: inline-block;
+    margin-right: 15px;
+}
+.post .post-description .stats .stat-item .icon {
+    margin-right: 8px;
+}
