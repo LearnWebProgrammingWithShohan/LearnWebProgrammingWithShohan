@@ -1,7 +1,7 @@
 <?php
 	ob_start();
 	session_start();
-    require_once 'app/classes/Database.php';
+    // require_once 'app/classes/Database.php';
     require_once 'app/classes/Task.php';
 
 	$taskObj = new Task();
