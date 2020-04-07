@@ -12,7 +12,7 @@ define('DB_PRODUCTION_USERNAME', 'learnwithshohan');
 define('DB_PRODUCTION_PASSWORD', 'ta75M*7b');
 define('DB_PRODUCTION_NAME', 'learnwebprogrammingwithshohan');
 
-if (DB_SERVER)
+if (DB_LOCAL_SERVER)
 {
 	$mysqli = new mysqli(DB_LOCAL_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
