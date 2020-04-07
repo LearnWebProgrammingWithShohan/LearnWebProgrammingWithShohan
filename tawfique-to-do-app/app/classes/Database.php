@@ -4,35 +4,34 @@
 
 		public static function dbconnect(){
 
-			$host = "localhost";
-			$user = "root";
-			$pass = "";
-			$db = "php_oop_todoapp";
-			// $conn = mysqli_connect($host, $user, $pass, $db);
-				// if ($conn->connect_error) {
-		  //   		die("Connection failed: " . $conn->connect_error);
-				// }
-				if($host){
-					$conn = mysqli_connect($host, $user, $pass, $db);
+				// Local DB Config
+				$local_server = 'localhost';
+			 	$db_username = 'root';
+			 	$db_password = '';
+ 				$db_name = 'php_oop_todoapp';
+
+				// Remote DB Config
+				$remote_server = $_SERVER['REMOTE_ADDR'];
+			 	$remote_db_username = 'learnwithshohan';
+			 	$remote_db_password = 'ta75M*7b';
+ 				$remote_db_name = 'learnwithshohandb';
+			
+
+				if($local_server){
+					$conn = mysqli_connect($local_server, $db_username, $db_password, $db_name);
 				}
-				else if($_SERVER['REMOTE_ADDR']){
-					$conn = mysqli_connect($user, $pass);
+				else if($remote_server){
+					$conn = mysqli_connect($remote_server, $remote_db_username, $remote_db_password, $remote_db_name);
 				}
 				else{
-					echo "I dont know the rest" ;
+					echo "DB Connected Failed" ;
 				}
 
-				// else{
-				// 	echo "Connected";
-				// }
 				return $conn;    	
 		}
 
 
 	}
 	
-	$obj = new Database();
-	$obj->dbconnect();
-
 
 ?>

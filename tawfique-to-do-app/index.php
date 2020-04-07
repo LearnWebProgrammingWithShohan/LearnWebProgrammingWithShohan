@@ -2,10 +2,11 @@
     ob_start();
     session_start();
 
-    require_once 'App/classes/Database.php';
+    // require_once 'App/classes/Database.php';
     require_once 'App/classes/Task.php';
 
     $taskObj = new Task();
+
 
     if (isset($_POST['insert'])) {
         $taskname_add = $_POST['taskname_add'];
