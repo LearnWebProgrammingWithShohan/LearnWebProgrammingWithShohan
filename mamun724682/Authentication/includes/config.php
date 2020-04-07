@@ -14,7 +14,7 @@ define('DB_PRODUCTION_NAME', 'learnwebprogrammingwithshohan');
 
 if (DB_SERVER)
 {
-	$mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+	$mysqli = new mysqli(DB_LOCAL_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
     // Check connection
 	if($mysqli === false){
