@@ -1,6 +1,5 @@
 <?php
-include 'functions.php';
-$sent_mail=new Mysql_Connection();
+include 'db.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,31 +18,42 @@ $sent_mail=new Mysql_Connection();
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">No.</th>
+      <th scope="col">No.(DESC)</th>
       <th scope="col">Email ID</th>
       <th scope="col">Subject</th>
-    <th scope="col" style="width: 30.00%">Message</th>
+      <th scope="col" style="width: 30.00%">Message</th>
       <th scope="col">Time Stamp</th>
     </tr>
   </thead>
   
-  <?php
-  $sql=$sent_mail->sentmail_db();
-  $count=1;
-  while($row=mysqli_fetch_array($sql))
-  {
-  ?>
- 
+
   <tbody>
+
+    <?php
+    $sql = "SELECT * FROM naowas_mail_1 ORDER BY id DESC";
+    $query = $conn -> prepare($sql);
+    $query -> execute();
+    $results = $query -> fetchAll(PDO::FETCH_OBJ);
+    $count=1;
+if($query -> rowCount() > 0)
+{
+foreach($results as $result)
+{
+    ?>
     <tr>
-      <td><?php echo $count;?></td>
-      <td><?php echo $row['email_id'];?></td>
-      <td><?php echo $row['sub'];?></td>
-	  <td><?php echo $row['message_body'];?></td>
-	  <td><?php echo $row['sent_time'];?></td>
+       <td><?php echo $count ; ?></td>
+       <td><?php echo $result -> email_id ; ?></td>
+       <td><?php echo $result -> sub ; ?></td>
+       <td><?php echo $result -> message_body ; ?></td>
+       <td><?php echo $result -> sent_time ; ?></td>
     </tr>
+<?php 
+$count=$count+1;
+ }
+}
+?> 
   </tbody>
-  <?php $count=$count+1;} ?>
+ 
 </table>
 
     <script src="assets/js/jquery.min.js"></script>

@@ -1,9 +1,9 @@
 <?php
-include 'functions.php';
-require 'PHPMailerAutoload.php';
+include 'phpmailer/PHPMailerAutoload.php';
+include 'db.php';
 require 'emailuserpass.php';
-$insert_mail=new Mysql_Connection();
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +23,6 @@ $insert_mail=new Mysql_Connection();
         $mail_id = $_POST['email'];
         $mail_sub = $_POST['subject'];
         $mail_body = $_POST['message'];
- 
 
         $mail = new PHPMailer;
         
@@ -46,16 +45,22 @@ $insert_mail=new Mysql_Connection();
         $mail->addAttachment($_FILES['file']['tmp_name'][$i], $_FILES['file']['name'][$i]);  
     }
         
-        $mail->isHTML(false);                                  // Set email format to HTML
-        
-        $mail->Subject = $_POST['subject'];
-        $mail->Body = $_POST['message'];
-        
-        if(!$mail->send()) {
-            echo 'Message could not be sent.';
-            echo 'Mailer Error: ' . $mail->ErrorInfo;
-        } else {
-            $sql=$insert_mail->sent_mail_db($mail_id,$mail_sub,$mail_body);
+            $mail->isHTML(false);                                  // Set email format to HTML
+            
+            $mail->Subject = $_POST['subject'];
+            $mail->Body = $_POST['message'];
+            
+            if(!$mail->send()) {
+                echo 'Message could not be sent.';
+                echo 'Mailer Error: ' . $mail->ErrorInfo;
+            } else {
+
+       $sql = "INSERT INTO `naowas_mail_1`(`email_id`, `sub`, `message_body`)VALUES(:email,:subject,:message)";
+            $query = $conn -> prepare($sql);
+            $query->bindParam(':email',$mail_id,PDO::PARAM_STR);
+            $query->bindParam(':subject',$mail_sub,PDO::PARAM_STR);
+            $query->bindParam(':message',$mail_body,PDO::PARAM_STR);
+            $query -> execute();
             echo "<script>alert('Mail has been sent')</script>";
             echo"<script>window.open('index.php','_self')</script>";
 
@@ -73,7 +78,9 @@ $insert_mail=new Mysql_Connection();
 			 <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Email"><small class="form-text text-danger">Please enter a correct email address.</small></div>
             <div class="form-group"><input class="form-control" type="text" name="subject" placeholder="Subject"></div>
             <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div>
-            <div class="form-group"><input type="hidden" name="MAX_FILE_SIZE" value="900000000"> <input class="form-control" type="file" name="file[]" multiple='multiple' id='file' placeholder="Attach File"></div>            <div class="form-group"><button class="btn btn-primary" type="submit" name="sendmail">send </button>
+            <div class="form-group"><input type="hidden" name="MAX_FILE_SIZE" value="900000000"> 
+            <input class="form-control" type="file" name="file[]" multiple='multiple' id='file' placeholder="Attach File"></div>
+            <div class="form-group"><button class="btn btn-primary" type="submit" name="sendmail">send </button>
             <span style= "float:right" ><a class="btn btn-primary btn-sm" href="sent.php" role="button">View sent Mail</a></span></div>
         </form>
     </div>
