@@ -2,7 +2,6 @@
 
 
 
-
 class Database{
 
 
@@ -20,52 +19,34 @@ class Database{
 
     public $local = "localhost";
 
-     
-    
     
     public $pdo;
-
     
        public function __construct(){
            
-            if(!isset($this->pdo)  && ($_SERVER['HTTP_HOST']==$this->local)){
+            if(!isset($this->pdo) ){
                 try{
-                    $link = new PDO("mysql:host=".$this->hostdb.";dbname=".$this->namedb,$this->userdb,$this->passdb);
-                    $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    $link->exec("SET CHARACTER SET utf8");
-                    $this->pdo = $link;
+                    if(($_SERVER['HTTP_HOST']==$this->local)){
+                        $link = new PDO("mysql:host=".$this->hostdb.";dbname=".$this->namedb,$this->userdb,$this->passdb);
+                        $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                        $link->exec("SET CHARACTER SET utf8");
+                        $this->pdo = $link;
+                    }elseif(($_SERVER['HTTP_HOST']!==$this->local)){
+                        $link = new PDO("mysql:host=".$this->hostdb2.";dbname=".$this->namedb2,$this->userdb2,$this->passdb2);
+                       $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                       $link->exec("SET CHARACTER SET utf8");
+                      $this->pdo = $link;
+                    }else{
+                        echo "Nothing Found";
+                    }                  
 
-                }
-                catch(PDOException $e){
-                   die("Failed to connect with database for localhost".$e->getMessage());    
+                }catch(PDOException $e){
+                   die("Failed to connect  database ".$e->getMessage());    
                 }
             }
-
-
-            elseif(!isset($this->pdo)  && ($_SERVER['HTTP_HOST']!==$this->local)){
-                try{
-                    $link = new PDO("mysql:host=".$this->hostdb2.";dbname=".$this->namedb2,$this->userdb2,$this->passdb2);
-                    $link->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    $link->exec("SET CHARACTER SET utf8");
-                    $this->pdo = $link;
-
-                }
-                catch(PDOException $e){
-                   die("Failed to connect with database for remote server".$e->getMessage());    
-                }
-            }
-            
-             else{
-              
-                echo "Nothing found";
-               }
-       }
-
-
-
 
     }
-
+}
 
     
 
