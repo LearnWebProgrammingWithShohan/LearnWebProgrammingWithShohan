@@ -24,7 +24,20 @@ require_once 'core/init.php';
       ));
 
       if($validation->passed()) {
-        echo 'validation passed';
+        $user = new User();
+
+        try {
+          $user->create(array(
+            'name' => Input::get('name'),
+            'email' => Input::get('email'),
+            'password' => Hash::make(Input::get('password'))
+          ));
+
+          echo "Registered Successfully";
+        } catch(Exception $e) {
+          die($e->getMessage());
+        }
+
       } else {
         foreach($validation->errors() as $error) {
           echo $error . '<br>';
