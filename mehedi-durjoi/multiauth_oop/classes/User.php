@@ -31,7 +31,7 @@ class User {
   public function find($user = null) {
     if($user) {
       $field = (is_numeric($user)) ? 'id' : 'email';
-      $data = $this->_db->get('users', array($fields, '=', $user));
+      $data = $this->_db->get('users', array($field, '=', $user));
 
       if($data->count()) {
         $this->_data = $data->first();
@@ -48,6 +48,8 @@ class User {
       if(password_verify($password, $this->data()->password)) {
         Session::put($this->_sessionName, $this->data()->id);
         return true;
+      } else {
+        echo "Your credential is wrong";
       }
     }
     return false;
@@ -59,5 +61,9 @@ class User {
 
   public function data() {
     return $this->_data;
+  }
+
+  public function isLoggedIn() {
+    return $this->_isLoggedIn;
   }
 }
