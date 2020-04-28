@@ -30,7 +30,8 @@ require_once 'core/init.php';
           $user->create(array(
             'name' => Input::get('name'),
             'email' => Input::get('email'),
-            'password' => Hash::make(Input::get('password'))
+            'password' => Hash::make(Input::get('password')),
+            'groups' => 1
           ));
 
           Session::flash('home', 'You registered successfully!');
