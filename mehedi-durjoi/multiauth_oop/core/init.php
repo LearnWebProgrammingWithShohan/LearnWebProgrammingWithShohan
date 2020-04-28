@@ -6,7 +6,7 @@ $GLOBALS['config'] = array(
     'host' => '127.0.0.1',
     'username' => 'root',
     'password' => '',
-    'db' => 'authentication_oop'
+    'db' => 'multiauth_oop'
   )
 );
 

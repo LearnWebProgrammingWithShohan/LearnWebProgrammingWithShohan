@@ -68,6 +68,57 @@ class DB {
     return false;
   }
 
+
+  public function insert($table, $fields = array()) {
+    if(count($fields)) {
+      $keys = array_keys($fields);
+      $values = null;
+      $x = 1;
+
+      foreach($fields as $field) {
+        $values .= '?';
+        if($x < count($fields)) {
+          $values .= ', ';
+        }
+        $x++;
+      }
+
+      $sql = "INSERT INTO {$table} (`" . implode('`, `', $keys) . "`) VALUES ({$values})";
+
+      if(!$this->query($sql, $fields)->error()) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public function update($table, $id, $fields = array()) {
+    $set = "";
+    $x = 1;
+
+    foreach($fields as $name => $value) {
+      $set .= "{$name} = ?";
+
+      if($x < count($fields)) {
+        $set .= ", ";
+      }
+      $x++;
+    }
+
+    $sql = "UPDATE {$table} SET {$set} where id = {$id}";
+
+    if(!$this->query($sql, $fields)->error()) {
+      return true;
+    }
+
+    return false;
+  }
+
+
+  public function error() {
+    return $this->_error;
+  }
+
   public function get($table, $where = array()) {
     return $this->action('SELECT *', $table, $where);
   }
@@ -76,9 +127,13 @@ class DB {
     return $this->action('DELETE', $table, $where);
   }
 
-  
-  public function error() {
-    return $this->_error;
+  public function results() {
+    return $this->_results;
   }
-
+  public function first() {
+    return $this->results()[0];
+  }
+  public function count() {
+    return $this->_count;
+  }
 }
