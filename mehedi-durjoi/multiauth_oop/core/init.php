@@ -7,8 +7,14 @@ $GLOBALS['config'] = array(
     'username' => 'root',
     'password' => '',
     'db' => 'multiauth_oop'
+  ),
+  'session' => array(
+    'session_name' => 'user',
+    'token_name' => 'token'
   )
 );
+
+require_once 'functions/sanitize.php';
 
 spl_autoload_register(function ($class) {
   require_once 'classes/'. $class . '.php';
