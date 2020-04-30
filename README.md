@@ -118,3 +118,6 @@ $ git branch -D branchName
 - There is a visual of how far behind your branch is from Master on GitHub under Branches.
 - Double check with team members before merging.
 - Make sure you are on a branch before you start coding. Get in the habit of checking.
+
+
+#### learn your own .......
