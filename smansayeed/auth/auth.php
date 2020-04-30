@@ -25,17 +25,20 @@
 
             $name        = $data['name'];
   
-            $email       = $data['email'];            
+            $email       = $data['email'];      
+
+             $role       = $data['role'];         
                
 
             $password    = md5($data['password']);
 
-            $sql = "INSERT INTO user(name,email,password) VALUES(:name,:email,:password)";
+            $sql = "INSERT INTO user(name,email,password,role) VALUES(:name,:email,:password,:role)";
             $query  = $this->db->pdo->prepare($sql);
             $query->bindValue(':name',$name);
 
             $query->bindValue(':email',$email);
             $query->bindValue(':password',$password);
+             $query->bindValue(':role',$role);
       
             $result =  $query->execute();
 
@@ -87,6 +90,7 @@
 
             $this->s->set_session_variable('name',$data->name);
             $this->s->set_session_variable('email',$data->email);
+            $this->s->set_session_variable('role',$data->role);
 
         }
 

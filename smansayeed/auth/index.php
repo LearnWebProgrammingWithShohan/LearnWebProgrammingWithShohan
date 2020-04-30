@@ -27,6 +27,7 @@
       $data = $user->login($_POST);
       if($data!=''){
         $u = $user->setUser($data);
+        $role = $_SESSION['role'];
 
         $loginmsg = '<h1 style="color:green">Success..!!</h1>';
       }else{
@@ -58,7 +59,7 @@
     <?php if(session_status()==PHP_SESSION_NONE){ ?>
 
 
-    <h1>Registration</h1>
+    <h1>registration</h1>
     
     <?php
         if($msg!=''){
@@ -71,6 +72,10 @@
             <input type="text" placeholder="email" name="email"><br>
          
             <input type="password" placeholder="password" name="password"><br>
+            <select name="role">
+                <option value="1">User</option>
+                <option value="2">Manager</option>
+            </select>
 
             
             <br>
@@ -103,6 +108,12 @@
         <?php 
 
 }elseif(session_status()==PHP_SESSION_ACTIVE){
+
+    if($role == 1){
+        echo "User";
+    }elseif($role == 2){
+        echo "Manager";
+    }
 
     ?>
     
