@@ -10,6 +10,7 @@
         $verify_user = User::verifyUser($email, $password);
 
         if ($verify_user) {
+            $session->login($verify_user);
             header('location: dashboard.php');
         } else {
             $_SESSION['error'] = "It seems you are a outsider! :/";

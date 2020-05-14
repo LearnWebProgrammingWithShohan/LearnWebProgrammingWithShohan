@@ -74,10 +74,10 @@ class User {
         global $database;
 
         $sql = "SELECT * FROM users WHERE email = '{$email}' AND password = '{$password}'";
-        $result = $database->query($sql);
+        $result = $database->query($sql)->fetch_assoc();
 
-        if ($result->num_rows == 1) {
-            return true;
+        if ($result) {
+            return $result;
         } else {
             return false;
         }
